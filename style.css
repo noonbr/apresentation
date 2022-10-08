@@ -18,13 +18,27 @@ a, #social-discord-item {
     transition: color .3s;
 }
 
-a:hover, #social-discord-item:hover {
+.rose-link:hover, #social-discord-item:hover {
     color: rgb(216, 43, 109);
     cursor: pointer;
 }
 
 ul {
     list-style: none;
+}
+
+nav {
+    padding: 1rem;
+}
+
+nav div ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid rgb(216, 43, 109);
 }
 
 header {
