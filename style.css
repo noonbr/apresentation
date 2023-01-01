@@ -108,6 +108,6 @@ footer {
     margin: 1rem;
 }
 
-footer span {
+footer a:hover {
     color: var(--main-color);
 }
