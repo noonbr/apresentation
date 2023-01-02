@@ -4,63 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/6d8256c1e8.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6d8256c1e8.js"></script>
+
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/normalize.css">
 
     <title>Non - Desenvolvedor</title>
 </head>
 <body>
-    <header>
-        <img src="./images/avatar.png" alt="Imagem do Titio Avô">
+    <header class="header">
+        <img src="./images/avatar.png" alt="Imagem do Titio Avô" class="header-profile">
 
-        <div class="informations">
-            <h1>Non</h1>
-            <h2>Desenvolvedor</h2>
-            <h3>Feliz Ano Novo! 🎉🥂</h3>
+        <div class="header-infos">
+            <h1 class="header-name">Non</h1>
+            <h2 class="header-work">Desenvolvedor</h2>
         </div>
     </header>
 
     <main>
-        <section class="social">
-            <h2>Redes Sociais</h2>
-            <h4>Me acompanhe nas redes sociais!</h4>
+        <section class="section-box">
+            <h2 class="section-title">Redes Sociais</h2>
+            <h3 class="section-desc">Me acompanhe nas redes sociais!</h3>
             <ul>
-                <li class="rose-link" id="social-discord-item" onclick="copyToClipboard()">
+                <li class="discord" id="discord" onclick="copyDiscord()">
                     <i class="fa-brands fa-discord"></i>
-                    <p id="discord-js-text">Discord</p>
+                    <span id="discord-js-text">Discord</span>
                 </li>
 
                 <li>
-                    <a class="rose-link" href="https://github.com/noonbr" target="_blank">
+                    <a href="https://github.com/noonbr" target="_blank">
                         <i class="fa-brands fa-github"></i>
-                        <p id="github-title">Github</p>
+                        <span id="github-title">Github</span>
                     </a>
                 </li>
             </ul>
         </section>
             
-        <section class="technologies">
-            <h2>Linguagens</h2>
-            <h4>Essas são as linguagens que eu uso!</h4>
+        <section class="section-box">
+            <h2 class="section-title">Linguagens</h2>
+            <h3 class="section-desc">Essas são as linguagens que eu uso!</h3>
             <ul>
                 <li>
-                    <i><img class="boxes_box_item_lang_icon" src="images/lua_logo.svg" alt="Logo da linguagem de programação Lua"></i>
-                    <p>Lua</p>
+                    <img src="images/lua_logo.svg" alt="Logo da linguagem de programação Lua">
+                    <span>Lua</span>
                 </li>
 
                 <li>
-                    <i><img class="boxes_box_item_lang_icon" src="images/html_logo.svg" alt="Logo da linguagem de marcação HTML"></i>
-                    <p>HTML</p>
+                    <img src="images/html_logo.svg" alt="Logo da linguagem de marcação HTML">
+                    <span>HTML</span>
                 </li>
 
                 <li>
-                    <i><img class="boxes_box_item_lang_icon" src="images/css_logo.svg" alt="Logo da linguagem de estilo CSS"></i>
-                    <p>CSS</p>
+                    <img src="images/css_logo.svg" alt="Logo da linguagem de estilo CSS">
+                    <span>CSS</span>
                 </li>
 
                 <li>
-                    <i><img class="boxes_box_item_lang_icon" src="images/js_logo.svg" alt="Logo da linguagem de programação JavaScript"></i>
-                    <p>JavaScript</p>
+                    <img src="images/js_logo.svg" alt="Logo da linguagem de programação JavaScript">
+                    <span>JavaScript</span>
                 </li>
             </ul>
         </section>

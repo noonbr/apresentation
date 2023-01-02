@@ -1,7 +1,7 @@
-function copyToClipboard() {
+function copyDiscord() {
     const discord = document.getElementById("discord-js-text")
     navigator.clipboard.writeText("non#8832")
-    discord.innerText = "Copiado!"
+    discord.innerText = "Copiado"
     setTimeout(
         function (){
             discord.innerHTML = "Discord"
