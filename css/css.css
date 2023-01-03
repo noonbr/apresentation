@@ -38,8 +38,6 @@ a:hover {
     color: white;
     font-size: 0.75em;
     font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 2em;
 }
 
 .header {
@@ -65,7 +63,6 @@ a:hover {
 .header-work {
     font-size: 1em;
     font-weight: normal;
-    margin: 0 auto;
 }
 
 .section-box {
@@ -81,22 +78,22 @@ a:hover {
     list-style: none;
     color: rgb(255, 255, 255);
     padding: 0;
-    margin: 0;
+    margin: 1.5em 0 0;
 }
 
-.section-box li {
+.social li, .langs li {
     display: inline-block;
     font-size: 1em;
-    margin-right: 24px;
+    margin-right: 2em;
 }
 
-.section-box img {
+.langs li img {
     display: block;
-    margin: auto;
+    margin: .2em auto;
     transition: transform .1s ease-in;
 }
 
-.section-box img:hover {
+.langs img:hover {
     transform: scale(1.1);
 }
 
@@ -107,8 +104,76 @@ footer {
     margin: 1em;
 }
 
+@media screen and (max-width: 35em) {
+    .section-box {
+        text-align: center;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 3em auto 5em;
+    }
+
+    .section-box .social {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section-box .social li {
+        display: block;
+        margin: 1.2em auto;
+    }
+
+    .github {
+        border-radius: .2em;
+        padding: .8em;
+        background-color: rgb(10, 10, 10);
+        transition: background-color .1s ease-in;
+    }
+
+    .github:hover {
+        border-radius: .2em;
+        padding: .8em;
+        background-color: rgb(20, 20, 20);
+    }
+
+    .langs {
+        display: block;
+        width: 100%;
+    }
+
+    .langs .col-1_2 {
+        float: left;
+        width: 50%;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 15em;
+    }
+}
+
 @media screen and (max-width: 25em) {
     .section-box {
-        max-width: 90%;
+        width: 20em;
+    }
+
+    .langs .col-1_2 {
+        display: block;
+        width: 100%;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    .langs .col-1_2 img{
+        display: inline;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer {
+        margin: 5em auto;
     }
 }
