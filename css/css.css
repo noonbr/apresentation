@@ -104,7 +104,7 @@ footer {
     margin: 1em;
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 48em) {
     .section-box {
         text-align: center;
         background: none;
@@ -150,30 +150,27 @@ footer {
     }
 
     footer {
-        margin-top: 15em;
+        margin-top: 20em;
     }
 }
 
 @media screen and (max-width: 30em) {
     .section-box {
-        width: 20em;
+        width: 25em;
+        margin-bottom: 1em;
     }
 
     .langs .col-1_2 {
-        display: block;
+        float: none;
         width: 100%;
-        margin: 1em 0;
-        padding: 0;
     }
 
-    .langs .col-1_2 img{
+    .langs li img {
         display: inline;
         vertical-align: middle;
-        margin: 0;
-        padding: 0;
     }
 
     footer {
-        margin: 5em auto;
+        margin: 0 0 2em;
     }
 }
