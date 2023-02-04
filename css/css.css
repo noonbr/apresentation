@@ -2,13 +2,44 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #212121;
-    --main-color: white;
+    background-color: var(--primary-color);
+    --primary-color: #212121;
+    --secondary-color: white;
+
+    --section_background-color: #171717;
+    --section_border-color: black;
+
+    transition: .2s;
+}
+
+.light-mode {
+    --primary-color: white;
+    --secondary-color: #303030;
+    --section_background-color: rgb(246, 252, 255);
+    --section_border-color: rgb(210, 241, 255);
+}
+
+.light-mode-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.social-button {
+    padding: .8em;
+    border-radius: .2em;
+}
+
+.social-button:hover {
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--secondary-color);
     transition: color .2s ease-in-out;
 }
 
@@ -17,25 +48,23 @@ a:hover {
 }
 
 .discord {
+    color: white;
     background-color: #7289da;
-    border-radius: .2em;
-    padding: .8em;
 }
 
 .discord:hover {
     background-color: #6a7fce;
-    cursor: pointer;
 }
 
 .section-title {
-    color: white;
+    color: var(--secondary-color);
     font-size: 1.125em;
     font-weight: bold;
     margin: 0;
 }
 
 .section-desc {
-    color: white;
+    color: var(--secondary-color);
     font-size: 0.75em;
     font-weight: normal;
 }
@@ -43,7 +72,7 @@ a:hover {
 .header {
     text-align: center;
     margin: 2em auto;
-    color: var(--main-color);
+    color: var(--secondary-color);
 }
 
 .header-profile {
@@ -51,7 +80,7 @@ a:hover {
     height: 6em;
     object-fit: cover;
     border-radius: 50%;
-    border: .3em solid var(--main-color);
+    border: .3em solid var(--secondary-color);
 }
 
 .header-name {
@@ -67,8 +96,8 @@ a:hover {
 
 .section-box {
     width: 31.25em;
-    background-color: #171717;
-    border: 1px solid black;
+    background-color: var(--section_background-color);
+    border: 1px solid var(--section_border-color);
     border-radius: .5em;
     margin: 1em auto;
     padding: 2em;
@@ -76,7 +105,7 @@ a:hover {
 
 .section-box ul {
     list-style: none;
-    color: rgb(255, 255, 255);
+    color: var(--secondary-color);
     padding: 0;
     margin: 1.5em 0 0;
 }
@@ -125,16 +154,13 @@ footer {
     }
 
     .github {
-        border-radius: .2em;
-        padding: .8em;
-        background-color: rgb(10, 10, 10);
-        transition: background-color .1s ease-in;
+        background-color: var(--section_background-color);
+        border: 1px solid var(--section_border-color);
     }
 
     .github:hover {
-        border-radius: .2em;
-        padding: .8em;
-        background-color: rgb(20, 20, 20);
+        background-color: var(--section_background-color);
+        border: 1px solid var(--section_border-color);
     }
 
     .langs {
