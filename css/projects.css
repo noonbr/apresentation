@@ -1,0 +1,109 @@
+html {
+    --primary-color: #212121;
+    --letter-colors: white;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--letter-colors);
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}
+
+iframe {
+    max-width: 100%;
+    width: 50rem;
+    display: none;
+}
+
+iframe.show {
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-subtitle {
+    font-size: 1rem;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+.list_resource {
+    list-style: none;
+    padding: 0;
+}
+
+.resource {
+    margin-bottom: 3.125rem;
+}
+
+.figma-link {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgb(41, 94, 173);
+}
+
+.figma-link::before {
+    content: url(../images/figma_logo.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.7rem;
+}
+
+.video-collapse-title {
+    width: 6.25rem;
+    font-size: 14px;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
+    outline: none;
+    background-color: rgb(31, 221, 72);
+}
+
+.video-collapse-title:hover {    
+    cursor: pointer;
+}
+
+.back-button {
+    transition: color 0.1s linear;
+}
+
+.back-button:hover {
+    color: rgb(31, 221, 72);
+    font-weight: bold;
+}
+
+footer {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 460px) {
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    .video-collapse-title {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .figma-link {
+        width: 100%;
+        text-align: center;
+    }
+}
