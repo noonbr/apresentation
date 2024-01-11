@@ -24,3 +24,8 @@ button.onclick = function(){
         this.classList.add("fa-moon");
     }
 }
+
+const $myProjetcs = document.querySelector(".projects");
+$myProjetcs.addEventListener("click", () => {
+    window.open("./projetos.html", "_self")
+})
