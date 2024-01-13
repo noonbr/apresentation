@@ -27,5 +27,5 @@ button.onclick = function(){
 
 const $myProjetcs = document.querySelector(".projects");
 $myProjetcs.addEventListener("click", () => {
-    window.open("./projetos.html", "_self")
+    window.open("./projects.html", "_self")
 })
