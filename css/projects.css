@@ -46,18 +46,6 @@ p {
     padding-bottom: 32px;
 }
 
-.wallpaper {
-    width: 100%;
-    height: 300px;
-    background-image: url("/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: bottom;
-    border-radius: 10px;
-    margin-bottom: 32px;
-    border-bottom: 3px solid rgb(61, 194, 68);
-}
-
 .list_resource {
     list-style: none;
     padding: 0;
@@ -143,10 +131,6 @@ footer {
 
     p {
         text-align: justify;
-    }
-
-    .wallpaper {
-        display: none
     }
 
     .resource {
