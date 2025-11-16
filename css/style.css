@@ -9,6 +9,9 @@ body {
     --section_background-color: #171717;
     --section_border-color: black;
 
+    --discord-background-color: #7289dacb;
+    --discord-border-color: #7289da;
+
     transition: .2s;
 }
 
@@ -17,6 +20,9 @@ body {
     --secondary-color: #303030;
     --section_background-color: rgb(246, 252, 255);
     --section_border-color: rgb(210, 241, 255);
+
+    --discord-background-color: #303030d2;
+    --discord-border-color: #303030;
 }
 
 .light-mode-icon {
@@ -48,12 +54,17 @@ a:hover {
 }
 
 .discord {
+    position: relative;
+    box-sizing: border-box;
     color: white;
-    background-color: #7289da;
+    background-color: var(--discord-background-color);
+    border: 2px solid var(--discord-border-color);
+    transition: background-color 150ms ease-in;
 }
 
 .discord:hover {
-    background-color: #6a7fce;
+    transition: background-color 150ms ease-in;
+    background-color: var(--discord-border-color);
 }
 
 .section-title {
@@ -141,6 +152,14 @@ a:hover {
 
 .projects-description {
     font-size: 1rem;
+}
+
+#discordSparkles {
+    position: absolute;
+    left: -1.6rem;
+    top: -1.3rem;
+    width: 10rem;
+    height: 5rem;
 }
 
 footer {

@@ -1,15 +1,26 @@
-var discordButton = document.querySelector(".discord")
-discordButton.onclick = function() {
-    var discordSpan = document.getElementById("discord-js-text")
-    navigator.clipboard.writeText("noonbr")
-    discordSpan.textContent = "Copiado"
-    setTimeout(() => {
-        discordSpan.textContent = "Discord"
+// const discordSparkles = document.getElementById("discordSparkles");
+const jsConfetti = new JSConfetti();
+
+var DButton = document.querySelector(".discord")
+let timeout;
+
+DButton.onclick = (event) => {
+    const discordText = document.getElementById("discord-js-text");
+    discordText.innerText = "noonbr"
+
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        discordText.innerText = "Discord"
     }, 1000)
+
+    navigator.clipboard.writeText("noonbr")
+
+    const {x, y} = discordText.getBoundingClientRect();
+    jsConfetti.addConfettiAtPosition({confettiDispatchPosition: {x, y}, emojis:["🎉"], confettiRadius: 10, confettiNumber: 10, emojiSize: 15});
 }
 
 var button = document.getElementById("light-mode")
-button.onclick = function(){
+button.onclick = () => {
     var body = document.querySelector("body");
 
     if (body.classList.contains("light-mode")){

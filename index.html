@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/6d8256c1e8.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -27,10 +28,13 @@
     
         <main>
             <section class="section-box">
+
                 <h2 class="section-title">Redes Sociais</h2>
                 <h3 class="section-desc">Me acompanhe nas redes sociais.</h3>
                 <ul class="social">
+
                     <li class="discord social-button">
+                        <canvas id="discordSparkles"></canvas>
                         <i class="fa-brands fa-discord"></i>
                         <span id="discord-js-text">Discord</span>
                     </li>
@@ -75,6 +79,7 @@
     </div>
 
     <script src="script/script.js"></script>
+
     <script>
         fetch("https://counterpro.vercel.app/api/count/id/nondeveloper/").catch(() => 0).then(response => {
             if (response.status == 200) {
