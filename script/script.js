@@ -1,4 +1,3 @@
-// const discordSparkles = document.getElementById("discordSparkles");
 const jsConfetti = new JSConfetti();
 
 var DButton = document.querySelector(".discord")
