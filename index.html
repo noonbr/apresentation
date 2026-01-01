@@ -75,7 +75,7 @@
             </section>
         </main>
 
-        <footer>Projeto desenvolvido por <a href="https://github.com/noonbr" target="_blank">Non.</a><br><span id="visits">0x</span></footer>
+        <footer>Projeto desenvolvido por <a href="https://github.com/noonbr" target="_blank">Non.</a><br><span id="visits">0 visitas</span></footer>
     </div>
 
     <script src="script/script.js"></script>
@@ -84,8 +84,8 @@
         fetch("https://counterpro.vercel.app/api/count/id/nondeveloper/").catch(() => 0).then(response => {
             if (response.status == 200) {
                 response.json().then(data => {
-                    visits = data.count
-                    document.querySelector("#visits").innerText = `${visits}x`
+                    const visits = data.count
+                    document.querySelector("#visits").innerText = `${visits} visitas`
                 })
             }
         })
