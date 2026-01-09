@@ -8,21 +8,22 @@
     <script src="https://kit.fontawesome.com/6d8256c1e8.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 
     <title>Non - Programador</title>
 </head>
 <body>
-    <i class="fa-solid fa-sun light-mode-icon" id="light-mode"></i>
+    
 
     <div class="container">
         <header class="header">
-            <img src="./images/avatar.png" alt="Imagem do Irmão do Jorel" class="header-profile">
-    
+            <img src="./images/avatar.png" alt="Imagem do Irmão do Jorel" class="header-profile"/>
+            <i class="fa-solid fa-sun light-mode-icon" id="light-mode" onclick="toggleLightMode()"></i>
             <div class="header-infos">
                 <h1 class="header-name">Non</h1>
                 <h2 class="header-work">Programador</h2>
+                
             </div>
         </header>
     
@@ -33,7 +34,7 @@
                 <h3 class="section-desc">Me acompanhe nas redes sociais.</h3>
                 <ul class="social">
 
-                    <li class="discord social-button">
+                    <li class="discord social-button" onclick="copyDiscordUser()">
                         <canvas id="discordSparkles"></canvas>
                         <i class="fa-brands fa-discord"></i>
                         <span id="discord-js-text">Discord</span>
@@ -78,17 +79,21 @@
         <footer>Projeto desenvolvido por <a href="https://github.com/noonbr" target="_blank">Non.</a><br><span id="visits">0 visitas</span></footer>
     </div>
 
-    <script src="script/script.js"></script>
+    <script src="index.js"></script>
 
     <script>
-        fetch("https://counterpro.vercel.app/api/count/id/nondeveloper/").catch(() => 0).then(response => {
-            if (response.status == 200) {
-                response.json().then(data => {
-                    const visits = data.count
-                    document.querySelector("#visits").innerText = `${visits} visitas`
-                })
-            }
-        })
+        try {
+            fetch("https://counterpro.vercel.app/api/count/id/nondeveloper/").then(res => {
+                if (res.status == 200) {
+                    res.json().then(data => {
+                        const visits = data.count
+                        document.querySelector("#visits").innerText = `${visits} visitas`
+                    })
+                }
+            })
+        } catch(e) {
+            console.log("Ocorreu um erro ao verificar a quantidade de visitas do site.")
+        }
     </script>
 </body>
 </html>
