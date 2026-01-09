@@ -1,9 +1,7 @@
 const jsConfetti = new JSConfetti();
 
-var DButton = document.querySelector(".discord")
 let timeout;
-
-DButton.onclick = (event) => {
+function copyDiscordUser() {
     const discordText = document.getElementById("discord-js-text");
     discordText.innerText = "noonbr"
 
@@ -18,17 +16,20 @@ DButton.onclick = (event) => {
     jsConfetti.addConfettiAtPosition({confettiDispatchPosition: {x, y}, emojis:["🎉"], confettiRadius: 10, confettiNumber: 10, emojiSize: 15});
 }
 
-var button = document.getElementById("light-mode")
-button.onclick = () => {
-    var body = document.querySelector("body");
+let lightModeStatus = false;
+function toggleLightMode() {
+    const body = document.querySelector("body");
+    const icon = document.querySelector("#light-mode");
 
-    if (body.classList.contains("light-mode")){
-        body.classList.remove("light-mode");
-        this.classList.remove("fa-moon");
-        this.classList.add("fa-sun");
-    } else {
+    lightModeStatus = !lightModeStatus;
+
+    if (lightModeStatus){
         body.classList.add("light-mode");
-        this.classList.remove("fa-sun");
-        this.classList.add("fa-moon");
+        icon.classList.remove("fa-sun")
+        icon.classList.add("fa-moon")
+    } else {
+        body.classList.remove("light-mode");
+        icon.classList.remove("fa-moon")
+        icon.classList.add("fa-sun")
     }
 }
